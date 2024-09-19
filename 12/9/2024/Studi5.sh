@@ -17,19 +17,24 @@ echo "enstein : harga kursi per set?"
 
 read kursi
 
+echo "total pengiriman dan instalasi adalah"
+
+read lain
+
 echo "enstein : modal nya brp?"
 
 read modal
 
 echo "jadi total komputer yg dibutuhin $komputer unit dan harga nya $unit berarti total nya $totalkomputer"
 
-echo "dan meja kursi masing masing harga 1 set nya $meja dan $kursi berarti total dari $komputer meja kursi itu $totalmersi"
+echo "dan meja kursi masing masing harga 1 set nya $meja dan $kursi berarti total dari $komputer meja kursi itu $totalmersi dan juga ada biaya instalasi pengiriman
+dan lain lain adalah $lain"
 
 echo "kalo total semuanya bisa $totalharga dengan modal kamu yang $modal jadi ya $duitsisa"
 
 totalkomputer=$((komputer * unit))
 totalmersi=$(((meja + kursi) * komputer))
-totalharga=$((totalkomputer + totalmersi))
+totalharga=$((totalkomputer + totalmersi + lain))
 duitsisa=$((modal - totalharga))
 
 if [ $duitsisa -lt 0 ]; then
