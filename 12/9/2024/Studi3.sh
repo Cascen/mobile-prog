@@ -28,14 +28,14 @@ read modal
 echo "jadi alat yg dibutuhin $alat alat yang masing masing harganya $harga dan belum lagi dengan proses instalasi harganya $install
 jadi totalnya $totalalat "
 
-echo "belum lagi biaya material tadi $material dan biaya arsitek $model dan biaya operasional lainnya $op jadi total biaya lainnya 
+echo "dan lagi total belajar buat staf nya adalah $staf dan ditambah biaya rawat lingkungan pertahun $rawat jadi biaya lain nya 
 adalah $totallain"
 
 echo "kalo total semuanya bisa $totalbanget dengan modal kamu yang $modal jadi ya $duitsisa"
 
 totalalat=$(((harga + install) * alat))
-totallain=$((material + model + op))
-totalbanget=$((totalgaji + totallain))
+totallain=$((staf + rawat))
+totalbanget=$((totalalat + totallain))
 duitsisa=$((modal - totalbanget))
 
 if [ $duitsisa -lt 0 ]; then
